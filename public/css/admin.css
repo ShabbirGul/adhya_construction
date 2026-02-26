@@ -1,0 +1,129 @@
+:root {
+    --primary: #f59e0b; /* Amber/Construction Orange */
+    --primary-hover: #d97706;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --accent: #334155;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: var(--light);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+}
+
+.construction-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.construction-logo i {
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: -0.025em;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #94a3b8;
+}
+
+input {
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 0.875rem;
+    border-radius: 0.75rem;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.2s;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(0,0,0,0.3);
+}
+
+.btn {
+    width: 100%;
+    background: var(--primary);
+    color: var(--dark);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.dashboard-container {
+    max-width: 1000px;
+    width: 90%;
+    background: white;
+    color: var(--dark);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--light);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.logout-link {
+    background: #ef4444;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.logout-link:hover {
+    background: #dc2626;
+}
