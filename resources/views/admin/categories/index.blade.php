@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Dashboard')
+@section('title', 'Categories')
 
 @section('breadcrumb')
 <a href="{{ route('admin.dashboard') }}" style="color: #ffffff; text-decoration: none;">Admin</a> /
@@ -10,8 +10,7 @@
 @section('content')
 <div class="header"
     style="border:none; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center;">
-    <h1 style="margin:0; text-align: left; font-size: 1.5rem; color: var(--dark); font-weight: 700;">Categories
-        Management</h1>
+    <h1 style="margin:0; text-align: left; font-size: 1.5rem; color: var(--dark); font-weight: 700;">Categories</h1>
     <button id="openSlider" class="btn">
         <i class="fa-solid fa-plus"></i> Add New Category
     </button>
@@ -20,7 +19,7 @@
 <div class="table-card">
     <div class="table-header"
         style="padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9;">
-        <form action="{{ route('admin.dashboard') }}" method="GET" class="search-box" style="position: relative;">
+        <form action="{{ route('categories.index') }}" method="GET" class="search-box" style="position: relative;">
             <i class="fa-solid fa-magnifying-glass"
                 style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: #64748b;"></i>
             <input type="text" name="search" value="{{ request('search') }}" placeholder="Search Categories..."
@@ -28,7 +27,7 @@
         </form>
 
         <div class="per-page">
-            <form action="{{ route('admin.dashboard') }}" method="GET">
+            <form action="{{ route('categories.index') }}" method="GET">
                 <select name="per_page" onchange="this.form.submit()"
                     style="padding: 0.5rem 1rem; border-radius: 0.5rem; border: 1px solid #cbd5e1; background: #ffffff; color: #1e293b; cursor: pointer;">
                     <option value="10" {{ request('per_page')==10 ? 'selected' : '' }}>10 per page</option>
@@ -130,7 +129,7 @@
             </div>
 
             <div class="footer-per-page">
-                <form action="{{ route('admin.dashboard') }}" method="GET">
+                <form action="{{ route('categories.index') }}" method="GET">
                     @if(request('search'))
                     <input type="hidden" name="search" value="{{ request('search') }}">
                     @endif
@@ -160,44 +159,46 @@
         <form id="addCategoryForm" action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
-                <label class="form-label">
-                    <span>Category Title <span class="required">*</span></span>
-                </label>
-                <input type="text" name="title" value="{{ old('title') }}" placeholder=""
-                    required class="form-control">
+                <label style="color: #475569; font-weight: 600;">Category Title <span
+                        style="color: #ef4444;">*</span></label>
+                <input type="text" name="title" value="{{ old('title') }}" placeholder="" required
+                    style="background: #ffffff; color: #1e293b; border: 1px solid #cbd5e1; padding: 0.875rem;">
                 @error('title') <div style="color: #ef4444; font-size: 0.75rem; margin-top: 0.25rem;">{{ $message }}
                 </div> @enderror
             </div>
 
             <div class="form-group">
-                <label class="form-label">
-                    <span>Description <span class="required">*</span></span>
-                </label>
-                <textarea name="description" rows="5" placeholder="Enter category details..." required
-                    class="form-control">{{ old('description') }}</textarea>
+                <label style="color: #475569; font-weight: 600;">Description <span
+                        style="color: #ef4444;">*</span></label>
+                <textarea name="description" rows="6" placeholder="Enter category details..." required
+                    style="width: 100%; padding: 0.875rem; border: 1px solid #cbd5e1; border-radius: 0.75rem; font-family: inherit; resize: vertical;">{{ old('description') }}</textarea>
                 @error('description') <div style="color: #ef4444; font-size: 0.75rem; margin-top: 0.25rem;">{{ $message
                     }}</div> @enderror
             </div>
 
             <div class="form-group">
-                <label class="form-label">Category Image</label>
-                <div class="upload-container" onclick="document.getElementById('category_image').click()">
+                <label style="color: #475569; font-weight: 600;">Category Image</label>
+                <div
+                    style="border: 2px dashed #cbd5e1; border-radius: 0.75rem; padding: 1.5rem; text-align: center; background: #f8fafc;">
                     <input type="file" name="image" id="category_image" accept="image/*" style="display: none;">
-                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
-                    <span class="upload-text">Click to upload image</span>
-                    <span class="upload-hint">JPG, PNG, GIF, WEBP (Max 2MB)</span>
-
-                    <div id="image_preview" class="preview-container">
-                        <img src="" alt="Preview" class="preview-image">
+                    <label for="category_image" style="cursor: pointer; margin: 0; color: var(--primary);">
+                        <i class="fa-solid fa-cloud-arrow-up fa-2x" style="display: block; margin-bottom: 0.5rem;"></i>
+                        <span>Click to upload image</span>
+                    </label>
+                    <div id="image_preview" style="margin-top: 1rem; display: none;">
+                        <img src="" alt="Preview"
+                            style="max-width: 100%; height: 100px; border-radius: 0.5rem; object-fit: cover;">
                     </div>
                 </div>
+                <small style="color: #64748b; display: block; margin-top: 0.5rem;">JPG, PNG, GIF, WEBP (Max 2MB)</small>
                 @error('image') <div style="color: #ef4444; font-size: 0.75rem; margin-top: 0.25rem;">{{ $message }}
                 </div> @enderror
             </div>
 
             <div class="form-group">
-                <label class="form-label">Status</label>
-                <select name="status" class="form-control">
+                <label style="color: #475569; font-weight: 600;">Status</label>
+                <select name="status"
+                    style="width: 100%; padding: 0.875rem; border: 1px solid #cbd5e1; border-radius: 0.75rem; background: #ffffff; cursor: pointer;">
                     <option value="1">Active</option>
                     <option value="0">Inactive</option>
                 </select>
@@ -251,7 +252,6 @@
         }
     });
 
-    // Keep slider open if there are validation errors
     @if ($errors -> any())
         showSlider();
     @endif

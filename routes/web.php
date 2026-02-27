@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\VehicleController;
+use App\Http\Controllers\Admin\BannerController;
 
 /*
  |--------------------------------------------------------------------------
@@ -29,3 +32,7 @@ Route::get('/admin/login', [AdminController::class , 'showLogin'])->name('admin.
 Route::post('/admin/login', [AdminController::class , 'login']);
 Route::get('/admin/dashboard', [AdminController::class , 'dashboard'])->name('admin.dashboard');
 Route::post('/admin/logout', [AdminController::class , 'logout'])->name('admin.logout');
+
+// category & vehicles
+Route::resource('admin/categories', CategoryController::class)->names('categories');
+Route::resource('admin/vehicles', VehicleController::class)->names('vehicles');Route::resource('admin/banners', \App\Http\Controllers\Admin\BannerController::class)->names('banners');

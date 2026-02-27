@@ -30,12 +30,20 @@ class AdminController extends Controller
         return back()->withErrors(['email' => 'Invalid credentials']);
     }
 
-    public function dashboard()
+    public function dashboard(\Illuminate\Http\Request $request)
     {
         if (!Session::has('admin_logged_in')) {
             return redirect()->route('admin.login');
         }
-        return view('admin.dashboard');
+
+        $query = \App\Models\Category::query();
+        if ($request->has('search')) {
+            $query->where('title', 'like', '%' . $request->search . '%');
+        }
+        $perPage = $request->get('per_page', 10);
+        $categories = $query->latest()->paginate($perPage);
+
+        return view('admin.dashboard', compact('categories'));
     }
 
     public function logout()
