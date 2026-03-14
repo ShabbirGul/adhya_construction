@@ -21,7 +21,7 @@
             </div>
             <nav class="sidebar-nav">
                 <a href="{{ route('categories.index') }}"
-                    class="{{ request()->routeIs('categories.*') || request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+                    class="{{ request()->routeIs('categories.*') ? 'active' : '' }}">
                     <i class="fa-solid fa-layer-group"></i> Categories
                 </a>
                 <a href="{{ route('banners.index') }}" class="{{ request()->routeIs('banners.*') ? 'active' : '' }}">
@@ -29,6 +29,24 @@
                 </a>
                 <a href="{{ route('vehicles.index') }}" class="{{ request()->routeIs('vehicles.*') ? 'active' : '' }}">
                     <i class="fa-solid fa-truck-pickup"></i> Vehicles
+                </a>
+                <a href="{{ route('clients.index') }}" class="{{ request()->routeIs('clients.*') ? 'active' : '' }}">
+                    <i class="fa-solid fa-users"></i> Clients
+                </a>
+                <a href="{{ route('histories.index') }}" class="{{ request()->routeIs('histories.*') ? 'active' : '' }}">
+                    <i class="fa-solid fa-clock-rotate-left"></i> History
+                </a>
+                <a href="{{ route('countries.index') }}" class="{{ request()->routeIs('countries.*') ? 'active' : '' }}">
+                    <i class="fa-solid fa-globe"></i> Countries
+                </a>
+                <a href="{{ route('testimonials.index') }}" class="{{ request()->routeIs('testimonials.*') ? 'active' : '' }}">
+                    <i class="fa-solid fa-comment-dots"></i> Testimonials
+                </a>
+                <a href="{{ route('faqs.index') }}" class="{{ request()->routeIs('faqs.*') ? 'active' : '' }}">
+                    <i class="fa-solid fa-circle-question"></i> FAQs
+                </a>
+                <a href="{{ route('contacts.index') }}" class="{{ request()->routeIs('contacts.*') ? 'active' : '' }}">
+                    <i class="fa-solid fa-envelope"></i> Contact Queries
                 </a>
             </nav>
             <div class="sidebar-footer">

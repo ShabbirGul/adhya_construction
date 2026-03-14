@@ -19,4 +19,9 @@ class Category extends Model
     protected $casts = [
         'status' => 'boolean',
     ];
+
+    public function services()
+    {
+        return $this->hasMany(Service::class);
+    }
 }

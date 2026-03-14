@@ -35,7 +35,7 @@ class BannerController extends Controller
         $data = $request->validated();
 
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('banners', 'public');
+            $data['image'] = 'storage/' . $request->file('image')->store('banners', 'public');
         }
 
         Banner::create($data);
@@ -49,9 +49,9 @@ class BannerController extends Controller
 
         if ($request->hasFile('image')) {
             if ($banner->image) {
-                Storage::disk('public')->delete($banner->image);
+                Storage::disk('public')->delete(str_replace('storage/', '', $banner->image));
             }
-            $data['image'] = $request->file('image')->store('banners', 'public');
+            $data['image'] = 'storage/' . $request->file('image')->store('banners', 'public');
         }
 
         $banner->update($data);
@@ -62,7 +62,7 @@ class BannerController extends Controller
     public function destroy(Banner $banner)
     {
         if ($banner->image) {
-            Storage::disk('public')->delete($banner->image);
+            Storage::disk('public')->delete(str_replace('storage/', '', $banner->image));
         }
         $banner->delete();
 

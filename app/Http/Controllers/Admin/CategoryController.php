@@ -34,7 +34,7 @@ class CategoryController extends Controller
         $data = $request->validated();
 
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('categories', 'public');
+            $data['image'] = 'storage/' . $request->file('image')->store('categories', 'public');
         }
 
         Category::create($data);
@@ -53,9 +53,9 @@ class CategoryController extends Controller
 
         if ($request->hasFile('image')) {
             if ($category->image) {
-                Storage::disk('public')->delete($category->image);
+                Storage::disk('public')->delete(str_replace('storage/', '', $category->image));
             }
-            $data['image'] = $request->file('image')->store('categories', 'public');
+            $data['image'] = 'storage/' . $request->file('image')->store('categories', 'public');
         }
 
         $category->update($data);
@@ -66,7 +66,7 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         if ($category->image) {
-            Storage::disk('public')->delete($category->image);
+            Storage::disk('public')->delete(str_replace('storage/', '', $category->image));
         }
         $category->delete();
 

@@ -39,7 +39,7 @@ class VehicleController extends Controller
         $data = $request->validated();
 
         if ($request->hasFile('image')) {
-            $data['image'] = $request->file('image')->store('vehicles', 'public');
+            $data['image'] = 'storage/' . $request->file('image')->store('vehicles', 'public');
         }
 
         Vehicle::create($data);
@@ -63,9 +63,9 @@ class VehicleController extends Controller
 
         if ($request->hasFile('image')) {
             if ($vehicle->image) {
-                Storage::disk('public')->delete($vehicle->image);
+                Storage::disk('public')->delete(str_replace('storage/', '', $vehicle->image));
             }
-            $data['image'] = $request->file('image')->store('vehicles', 'public');
+            $data['image'] = 'storage/' . $request->file('image')->store('vehicles', 'public');
         }
 
         $vehicle->update($data);
@@ -76,7 +76,7 @@ class VehicleController extends Controller
     public function destroy(Vehicle $vehicle)
     {
         if ($vehicle->image) {
-            Storage::disk('public')->delete($vehicle->image);
+            Storage::disk('public')->delete(str_replace('storage/', '', $vehicle->image));
         }
         $vehicle->delete();
 
