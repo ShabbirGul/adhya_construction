@@ -3,7 +3,7 @@
 @section('title', 'Frequently Asked Questions - Adhya Construction')
 
 @section('content')
-<div class="pbmit-title-bar-wrapper" style="background-image: url('{{ asset('assets/user/images/bg/titlebar.jpg') }}');">
+<div class="pbmit-title-bar-wrapper" style="background-image: url('{{ asset('assets/user/images/otherpagebanner.jpg') }}');">
     <div class="container">
         <div class="pbmit-title-bar-content text-center py-5">
             <h1 class="pbmit-title text-white">Frequently Asked Questions</h1>
@@ -19,26 +19,31 @@
 <div class="page-content py-5">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-10">
-                <div class="accordion custom-accordion" id="faqAccordion">
-                    @forelse($faqs as $faq)
-                    <div class="accordion-item mb-4 border-0 shadow-sm glass-card" style="border-radius: 15px !important; overflow: hidden;">
-                        <h2 class="accordion-header" id="heading{{ $loop->index }}">
-                            <button class="accordion-button {{ !$loop->first ? 'collapsed' : '' }} py-4 px-4 font-weight-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $loop->index }}" style="background: transparent; color: var(--pbmit-global-color); font-size: 1.1rem;">
-                                {{ $faq->question }}
-                            </button>
-                        </h2>
-                        <div id="collapse{{ $loop->index }}" class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body px-4 pb-4 pt-0 text-muted" style="line-height: 1.8;">
-                                {{ $faq->answer }}
+            <div class="col-lg-10">
+                <div class="accordion" id="faqAccordion">
+                    @if(count($faqs) > 0)
+                        @foreach($faqs as $faq)
+                        <div class="accordion-item glass-card mb-4 border-0 shadow-lg" style="overflow: hidden;">
+                            <h2 class="accordion-header" id="heading{{ $faq->id }}">
+                                <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }} py-4 px-4 font-weight-bold" type="button" 
+                                    style="color: #4a0404 !important; font-weight: 800 !important;"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse{{ $faq->id }}" 
+                                    aria-expanded="{{ $loop->first ? 'true' : 'false' }}" aria-controls="collapse{{ $faq->id }}">
+                                    {{ $faq->question }}
+                                </button>
+                            </h2>
+                            <div id="collapse{{ $faq->id }}" class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body px-4 pb-4 pt-2 text-muted" style="line-height: 1.8;">
+                                    {{ $faq->answer }}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    @empty
-                    <div class="text-center py-5">
-                        <h4>No FAQs found at the moment.</h4>
-                    </div>
-                    @endforelse
+                        @endforeach
+                    @else
+                        <div class="text-center py-5">
+                            <h4 class="text-muted">No FAQs found at the moment.</h4>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

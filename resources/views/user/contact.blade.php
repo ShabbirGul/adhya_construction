@@ -3,7 +3,7 @@
 @section('title', 'Contact Us - Adhya Construction')
 
 @section('content')
-<div class="pbmit-title-bar-wrapper" style="background-image: url({{ asset('assets/user/images/bg/titlebar.jpg') }});">
+<div class="pbmit-title-bar-wrapper" style="background-image: url('{{ asset('assets/user/images/otherpagebanner.jpg') }}');">
     <div class="container">
         <div class="pbmit-title-bar-content text-center py-5">
             <h1 class="pbmit-title">Contact Us</h1>

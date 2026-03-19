@@ -18,7 +18,7 @@
                             <div class="container">
                                 <div class="pbmit-slider-content">
                                     <h5 class="pbmit-sub-title transform-delay-1"><span>{{ $banner->subtitle }}</span></h5>
-                                    <h2 class="pbmit-title transform-left transform-delay-2"><span>{!! str_replace('<br>', '<br> ', nl2br($banner->title)) !!}</span></h2>
+                                    <h2 class="pbmit-title transform-left transform-delay-2"><span class="text-white">{!! str_replace('<br>', '<br> ', nl2br($banner->title)) !!}</span></h2>
                                     @if($banner->button_text)
                                     <div class="pbmit-button">
                                         <div class="transform-bottom transform-delay-3">
@@ -41,7 +41,7 @@
                             <div class="container">
                                 <div class="pbmit-slider-content">
                                     <h5 class="pbmit-sub-title transform-delay-1"><span>Adhya Construction</span></h5>
-                                    <h2 class="pbmit-title transform-left transform-delay-2"><span>Building Your <br> Dreams with <br> Excellence.</span></h2>
+                                    <h2 class="pbmit-title transform-left transform-delay-2"><span class="text-white">Building Your <br> Dreams with <br> Excellence.</span></h2>
                                 </div>
                             </div>
                         </div>
@@ -68,10 +68,10 @@
                         <div class="swiper-wrapper" style="display: flex; align-items: stretch;">
                             @forelse($categories as $category)
                             <article class="pbmit-award-box-style-1 swiper-slide" style="height: auto;">
-                                <div class="pbmit-awardbox-wrapper" style="height: 100%; display: flex; flex-direction: column;">
-                                    <div class="pbmit-img-box">
+                                <div class="pbmit-awardbox-wrapper glass-card" style="height: 100%; display: flex; flex-direction: column;">
+                                    <div class="pbmit-img-box shimmer">
                                         <a href="{{ route('user.vehicles', ['category' => $category->id]) }}">
-                                            <img src="{{ $category->image ? asset($category->image) : asset('assets/user/images/homepage-2/award-box/img-01.jpg') }}" alt="{{ $category->title }}">		
+                                            <img src="{{ $category->image ? asset($category->image) : asset('assets/user/images/homepage-2/award-box/img-01.jpg') }}" alt="{{ $category->title }}" style="width: 100%; height: 250px; object-fit: cover;">		
                                             <h4 class="pbmit-freight-box-title">{{ $category->title }}</h4>
                                         </a>
                                     </div>
@@ -106,18 +106,18 @@
             </div>
             <div class="row pt-4">
                 @forelse($latestVehicles as $vehicle)
-                <article class="pbmit-service-style-2 col-md-4 mb-4" id="vehicles-cat-{{ $vehicle->category_id }}">
-                    <div class="pbminfotech-post-item">
-                        <div class="pbmit-featured-img-wrapper">
+                <article class="pbmit-service-style-2 col-md-4 mb-5" id="vehicles-cat-{{ $vehicle->category_id }}">
+                    <div class="pbminfotech-post-item glass-card h-100 shadow-lg">
+                        <div class="pbmit-featured-img-wrapper shimmer">
                             <div class="pbmit-featured-wrapper">
-                                <img src="{{ asset($vehicle->image) }}" class="img-fluid" alt="{{ $vehicle->title }}">
+                                <img src="{{ asset($vehicle->image) }}" class="img-fluid" alt="{{ $vehicle->title }}" style="width: 100%; height: 280px; object-fit: cover;">
                             </div>
                         </div>
-                        <div class="pbminfotech-box-content">
-                            <div class="pbmit-serv-cat">{{ $vehicle->category->title ?? '' }}</div>
-                            <h3 class="pbmit-service-title"><a href="#">{{ $vehicle->title }}</a></h3>
+                        <div class="pbminfotech-box-content p-4">
+                            <div class="pbmit-serv-cat font-weight-bold mb-2" style="color: #d4af37;">{{ $vehicle->category->title ?? '' }}</div>
+                            <h3 class="pbmit-service-title mb-3"><a href="#" style="color: #4a0404; font-weight: 800;">{{ $vehicle->title }}</a></h3>
                             <div class="pbmit-service-description">
-                                <p>{{ Str::limit($vehicle->description, 100) }}</p>
+                                <p class="font-weight-bold" style="color: #333333; font-size: 0.95rem;">{{ Str::limit($vehicle->description, 120) }}</p>
                             </div>
                         </div>
                     </div>
@@ -151,28 +151,28 @@
 
     <!-- Statistics Section -->
     <!-- Statistics Section -->
-    <section class="section-md" style="background-color: #e3f2fd;">
+    <section class="section-md" style="background-color: #4a0404; color: white;">
         <div class="container">
             <div class="row g-4 text-center">
                 <div class="col-md-4">
-                    <div class="stat-card p-4 h-100" style="background: #ffffff; border: 1px solid #bbdefb; border-radius: 12px;">
-                        <h2 class="font-weight-bold mb-2" style="color: #0d47a1;">5 K+</h2>
-                        <h5 style="color: #1a237e;">Successful Project Completion</h5>
-                        <p class="small mb-0" style="color: #1565c0;">For all transport authorize and major infrastructure builds.</p>
+                    <div class="stat-card p-5 h-100 shadow-lg" style="background: #ffffff; border-radius: 20px; border: 2px solid #d4af37;">
+                        <h2 class="stat-number">5 K+</h2>
+                        <h5 class="font-weight-bold mb-2" style="color: #000000;">Successful Project Completion</h5>
+                        <p class="mb-0 font-weight-bold" style="color: #444444; font-size: 0.9rem;">For all transport authorize and major infrastructure builds.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="stat-card p-4 h-100" style="background: #ffffff; border: 1px solid #bbdefb; border-radius: 12px;">
-                        <h2 class="font-weight-bold mb-2" style="color: #0d47a1;">30 K+</h2>
-                        <h5 style="color: #1a237e;">Proactive Communication</h5>
-                        <p class="small mb-0" style="color: #1565c0;">Key to successful transport project planning and execution.</p>
+                    <div class="stat-card p-5 h-100 shadow-lg" style="background: #ffffff; border-radius: 20px; border: 2px solid #d4af37;">
+                        <h2 class="stat-number">30 K+</h2>
+                        <h5 class="font-weight-bold mb-2" style="color: #000000;">Proactive Communication</h5>
+                        <p class="mb-0 font-weight-bold" style="color: #444444; font-size: 0.9rem;">Key to successful transport project planning and execution.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="stat-card p-4 h-100" style="background: #ffffff; border: 1px solid #bbdefb; border-radius: 12px;">
-                        <h2 class="font-weight-bold mb-2" style="color: #0d47a1;">89 M</h2>
-                        <h5 style="color: #1a237e;">Material Handling</h5>
-                        <p class="small mb-0" style="color: #1565c0;">Efficient resource management and streamlined delivery logistics.</p>
+                    <div class="stat-card p-5 h-100 shadow-lg" style="background: #ffffff; border-radius: 20px; border: 2px solid #d4af37;">
+                        <h2 class="stat-number">89 M</h2>
+                        <h5 class="font-weight-bold mb-2" style="color: #000000;">Material Handling</h5>
+                        <p class="mb-0 font-weight-bold" style="color: #444444; font-size: 0.9rem;">Efficient resource management and streamlined delivery logistics.</p>
                     </div>
                 </div>
             </div>
@@ -180,15 +180,15 @@
     </section>
 
     <!-- Global Presence Section -->
-    <section id="global-presence" class="section-xl pbmit-bg-color-blackish text-white" style="position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; right: 0; opacity: 0.05; width: 50%; pointer-events: none;">
-            <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M150 200h700v600h-700z" fill="currentColor"/></svg> <!-- Placeholder for map dots if needed -->
+    <section id="global-presence" class="section-xl" style="background-color: #4a0404; color: white; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; right: 0; opacity: 0.1; width: 50%; pointer-events: none; color: #d4af37;">
+            <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M150 200h700v600h-700z" fill="currentColor"/></svg>
         </div>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="pbmit-heading-subheading">
-                        <h4 class="pbmit-subtitle text-white-50">Global Presence</h4>
+                        <h4 class="pbmit-subtitle text-white-50" style="color: rgba(212, 175, 55, 0.7) !important;">Global Presence</h4>
                         <h2 class="pbmit-title text-white">List of nations we <br> work with worldwide</h2>
                     </div>
                     <p class="text-white-50 mt-4" style="font-size: 1.1rem;">We have established a strong presence globally, delivering excellence across borders with streamlined transport and logistics solutions.</p>
@@ -206,9 +206,9 @@
                         @endphp
                         @foreach($nations as $nation)
                         <div class="col-6 col-sm-4">
-                            <div class="p-4 h-100 text-center" style="background: #ffffff; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1);">
-                                <span class="nation-badge" style="background: #0d47a1; color: white;">{{ $nation['code'] }}</span>
-                                <h5 class="mb-0 mt-2 font-weight-bold" style="color: #1a237e;">{{ $nation['name'] }}</h5>
+                            <div class="p-4 h-100 text-center shadow-lg" style="background: #ffffff; border-radius: 15px; border: 1px solid #d4af37;">
+                                <span class="nation-badge fw-bold" style="background: #4a0404; color: #d4af37; padding: 5px 12px; border-radius: 8px;">{{ $nation['code'] }}</span>
+                                <h5 class="mb-0 mt-3 font-weight-bold" style="color: #4a0404;">{{ $nation['name'] }}</h5>
                             </div>
                         </div>
                         @endforeach

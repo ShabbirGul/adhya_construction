@@ -61,7 +61,7 @@
                         style="display: block; font-size: 0.75rem; color: #64748b; margin-bottom: 0.75rem; font-weight: 600;">CURRENT
                         IMAGE</span>
                     @if($vehicle->image)
-                    <img src="{{ asset('storage/' . $vehicle->image) }}" alt=""
+                    <img src="{{ asset($vehicle->image) }}" alt=""
                         style="width: 120px; height: 120px; border-radius: 0.75rem; object-fit: cover; border: 2px solid #ffffff; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
                     @else
                     <div

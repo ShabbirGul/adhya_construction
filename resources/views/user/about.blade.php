@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Title Bar -->
-<div class="pbmit-title-bar-wrapper" style="background-image: url('{{ asset('assets/user/images/bg/titlebar.jpg') }}');">
+<div class="pbmit-title-bar-wrapper" style="background-image: url('{{ asset('assets/user/images/otherpagebanner.jpg') }}');">
     <div class="container">
         <div class="pbmit-title-bar-content">
             <div class="pbmit-title-bar-content-inner">
@@ -32,12 +32,15 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="about-image-wrapper p-2" style="border: 1px solid #eee; border-radius: 20px;">
-                        <img src="{{ ($history && $history->image) ? asset($history->image) : asset('assets/user/images/homepage-2/about-img.jpg') }}" class="img-fluid" style="border-radius: 15px;" alt="About Adhya">
+                        <img src="{{ ($history && $history->image) ? asset($history->image) : asset('assets/user/images/history/history-01.jpg') }}" class="img-fluid" style="border-radius: 15px;" alt="About Adhya">
                     </div>
                 </div>
                 <div class="col-lg-6 ps-lg-5">
                     <div class="pbmit-heading-subheading">
                         <h4 class="pbmit-subtitle">Our Story</h4>
+                        <div class="pbmit-about-logo mb-3">
+                            <img src="{{ asset('assets/user/images/aadyalogo.png') }}" alt="Adhya Logo" style="max-height: 80px;">
+                        </div>
                         <h2 class="pbmit-title">{{ $history->title ?? 'Maximizing Engineering Efficiency' }}</h2>
                     </div>
                     <div class="mt-4 mb-4">
@@ -47,9 +50,9 @@
                     
                     <div class="row g-4 mb-4">
                         <div class="col-md-6">
-                            <div class="d-flex align-items-start glass-card p-3" style="background: rgba(13, 27, 42, 0.02);">
+                            <div class="d-flex align-items-start glass-card p-3" style="background: rgba(74, 4, 4, 0.03);">
                                 <div class="me-3 mt-1">
-                                    <i class="fa-solid fa-check-circle text-primary" style="font-size: 1.5rem;"></i>
+                                    <i class="fa fa-check-circle text-primary" style="font-size: 1.5rem;"></i>
                                 </div>
                                 <div>
                                     <h5 class="fw-bold mb-1">Quality Focused</h5>
@@ -58,9 +61,9 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="d-flex align-items-start glass-card p-3" style="background: rgba(13, 27, 42, 0.02);">
+                            <div class="d-flex align-items-start glass-card p-3" style="background: rgba(74, 4, 4, 0.03);">
                                 <div class="me-3 mt-1">
-                                    <i class="fa-solid fa-users text-primary" style="font-size: 1.5rem;"></i>
+                                    <i class="fa fa-users text-primary" style="font-size: 1.5rem;"></i>
                                 </div>
                                 <div>
                                     <h5 class="fw-bold mb-1">Expert Team</h5>
@@ -87,8 +90,8 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="glass-card p-5 h-100 text-center bg-white shadow-sm border-0">
-                        <div class="icon-box mb-4 mx-auto" style="width: 80px; height: 80px; background: rgba(13, 27, 42, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fa-solid fa-bullseye text-primary" style="font-size: 2rem;"></i>
+                        <div class="icon-box mb-4 mx-auto" style="width: 80px; height: 80px; background: rgba(212, 175, 55, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-bullseye text-primary" style="font-size: 2rem;"></i>
                         </div>
                         <h3 class="fw-bold">Our Mission</h3>
                         <p class="text-muted">To provide innovative construction and logistics solutions that empower businesses and build lasting infrastructure.</p>
@@ -96,8 +99,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="glass-card p-5 h-100 text-center bg-white shadow-sm border-0">
-                        <div class="icon-box mb-4 mx-auto" style="width: 80px; height: 80px; background: rgba(13, 27, 42, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fa-solid fa-eye text-primary" style="font-size: 2rem;"></i>
+                        <div class="icon-box mb-4 mx-auto" style="width: 80px; height: 80px; background: rgba(212, 175, 55, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-eye text-primary" style="font-size: 2rem;"></i>
                         </div>
                         <h3 class="fw-bold">Our Vision</h3>
                         <p class="text-muted">To be the most trusted and efficient construction partner in India, recognized for our global standards.</p>
@@ -105,8 +108,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="glass-card p-5 h-100 text-center bg-white shadow-sm border-0">
-                        <div class="icon-box mb-4 mx-auto" style="width: 80px; height: 80px; background: rgba(13, 27, 42, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fa-solid fa-medal text-primary" style="font-size: 2rem;"></i>
+                        <div class="icon-box mb-4 mx-auto" style="width: 80px; height: 80px; background: rgba(212, 175, 55, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <i class="fa fa-trophy text-primary" style="font-size: 2rem;"></i>
                         </div>
                         <h3 class="fw-bold">Our Values</h3>
                         <p class="text-muted">Integrity, Safety, Sustainability, and Excellence in every detail of our operations.</p>

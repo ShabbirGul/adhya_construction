@@ -26,7 +26,7 @@
                 <div class="site-branding">
                     <h1 class="site-title">
                         <a href="{{ route('home') }}">
-                            <img class="logo-img" src="{{ asset('assets/user/images/logo.svg') }}" alt="Adhya Construction">
+                            <img class="logo-img" src="{{ asset('assets/user/images/aadyalogo.jpeg') }}" alt="Adhya Construction">
                         </a>
                     </h1>
                 </div>

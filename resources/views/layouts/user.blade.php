@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/user/images/fevicon.png') }}">      
+    <link rel="icon" type="image/png" href="{{ asset('assets/user/images/aadyalogo.png') }}">
     
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('assets/user/css/bootstrap.min.css') }}">
@@ -27,9 +27,12 @@
     <style>
         /* Premium Navy Blue Theme Overrides */
         :root {
-            --pbmit-global-color: #0d1b2a; /* Deep Navy Blue */
-            --pbmit-secondary-color: #1b263b;
-            --pbmit-light-navy: #415a77;
+            --pbmit-global-color: #4a0404; /* Deep Maroon */
+            --pbmit-secondary-color: #800000;
+            --pbmit-light-navy: #d4af37; /* Gold Accent */
+            --pbmit-gold: #d4af37;
+            --pbmit-gold-gradient: linear-gradient(135deg, #d4af37, #f1c40f);
+            --pbmit-maroon-gradient: linear-gradient(135deg, #4a0404, #800000);
         }
         .pbmit-bg-color-global { background-color: var(--pbmit-global-color) !important; }
         .pbmit-color-global { color: var(--pbmit-global-color) !important; }
@@ -73,9 +76,16 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
         .text-gradient {
-            background: linear-gradient(45deg, var(--pbmit-global-color), var(--pbmit-light-navy));
+            background: var(--pbmit-gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        .bg-maroon { background: var(--pbmit-maroon-gradient) !important; color: white !important; }
+        .bg-gold { background: var(--pbmit-gold-gradient) !important; color: #4a0404 !important; }
+        
+        .pbmit-title-bar-wrapper .pbmit-title, .pbmit-title-bar-wrapper h1 {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
         }
         .client-logo-wrapper {
             filter: grayscale(100%);
@@ -128,6 +138,19 @@
             display: inline-block;
             margin-bottom: 10px;
         }
+        /* Logo Curve Box */
+        .site-branding {
+            background: #4a0404;
+            padding: 15px 25px;
+            border-radius: 0 0 35px 35px;
+            box-shadow: 0 10px 20px rgba(74, 4, 4, 0.2);
+            position: relative;
+            z-index: 10;
+        }
+        .site-branding img {
+            max-height: 70px;
+            width: auto;
+        }
 
         /* Responsive Spacing Fixes */
         /* Section Spacing Fixes */
@@ -161,7 +184,8 @@
 
     <!-- JS -->
     <script src="{{ asset('assets/user/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/user/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/user/js/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/user/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/user/js/swiper.min.js') }}"></script>
     <script src="{{ asset('assets/user/js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('assets/user/js/jquery.waypoints.min.js') }}"></script>

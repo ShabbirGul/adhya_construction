@@ -71,7 +71,7 @@
                     $banners->perPage() }}</td>
                 <td style="padding: 1rem;">
                     @if($banner->image)
-                    <img src="{{ asset('storage/' . $banner->image) }}" alt=""
+                    <img src="{{ asset($banner->image) }}" alt=""
                         style="width: 60px; height: 60px; border-radius: 0.5rem; object-fit: cover; border: 1px solid #e2e8f0;">
                     @else
                     <div
@@ -105,7 +105,7 @@
                 <td style="padding: 1rem 2rem; text-align: right;">
                     <div style="display: inline-flex; gap: 0.5rem;">
                         <button type="button" class="edit-banner-btn" data-banner="{{ json_encode($banner) }}"
-                            data-image-url="{{ asset('storage/' . $banner->image) }}"
+                            data-image-url="{{ asset($banner->image) }}"
                             style="width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; border-radius: 0.5rem; border: 1px solid #e2e8f0; color: #64748b; background: #fff; cursor: pointer; transition: all 0.2s;"
                             title="Edit">
                             <i class="fa-solid fa-pen-to-square"></i>

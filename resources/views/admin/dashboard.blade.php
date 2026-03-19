@@ -69,7 +69,7 @@
                     $categories->perPage() }}</td>
                 <td style="padding: 1rem;">
                     @if($category->image)
-                    <img src="{{ asset('storage/' . $category->image) }}" alt=""
+                    <img src="{{ asset($category->image) }}" alt=""
                         style="width: 48px; height: 48px; border-radius: 0.5rem; object-fit: cover; border: 1px solid #e2e8f0;">
                     @else
                     <div
