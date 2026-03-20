@@ -22,7 +22,7 @@
                         </div>
                         <div class="pbmit-ihbox-contents">
                             <h4 class="pbmit-element-title">Office Address</h4>
-                            <p>Your Office Address Here, <br> City Name, Country</p>
+                            <p>Andhra Pradesh, Tamil Nadu, Kerala, Karnataka, Odisha & nearby</p>
                         </div>
                     </div>
                     <div class="pbmit-ihbox-style-8 mt-4">
@@ -31,7 +31,7 @@
                         </div>
                         <div class="pbmit-ihbox-contents">
                             <h4 class="pbmit-element-title">Phone Number</h4>
-                            <p>+91 12345 67890</p>
+                            <p>9490003311, 9705799889</p>
                         </div>
                     </div>
                     <div class="pbmit-ihbox-style-8 mt-4">
@@ -40,7 +40,7 @@
                         </div>
                         <div class="pbmit-ihbox-contents">
                             <h4 class="pbmit-element-title">Email Address</h4>
-                            <p>info@adhyaconstruction.com</p>
+                            <p>aadyaconstructionsequip@gmail.com</p>
                         </div>
                     </div>
                 </div>

@@ -12,8 +12,8 @@
                     <div class="pbmit-footer-widget-col-2 col-md-3">
                         <aside class="widget">
                             <div class="pbmit-contact-widget-lines text-white">
-                                <div class="pbmit-contact-widget-line pbmit-base-icon-phone">+91 12345 67890</div>
-                                <div class="pbmit-contact-widget-line pbmit-base-icon-email"><a href="mailto:info@adhyaconstruction.com" class="text-white">info@adhyaconstruction.com</a></div>
+                                <div class="pbmit-contact-widget-line pbmit-base-icon-phone">9490003311, 9705799889</div>
+                                <div class="pbmit-contact-widget-line pbmit-base-icon-email"><a href="mailto:aadyaconstructionsequip@gmail.com" class="text-white">aadyaconstructionsequip@gmail.com</a></div>
                             </div>
                         </aside>
                     </div>

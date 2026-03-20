@@ -24,13 +24,13 @@ class FaqController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'question' => 'required|string|max:255',
             'answer' => 'required|string',
             'status' => 'required|boolean',
         ]);
 
-        Faq::create($request->all());
+        Faq::create($validatedData);
 
         return redirect()->route('faqs.index')->with('success', 'FAQ created successfully.');
     }
@@ -42,13 +42,13 @@ class FaqController extends Controller
 
     public function update(Request $request, Faq $faq)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'question' => 'required|string|max:255',
             'answer' => 'required|string',
             'status' => 'required|boolean',
         ]);
 
-        $faq->update($request->all());
+        $faq->update($validatedData);
 
         return redirect()->route('faqs.index')->with('success', 'FAQ updated successfully.');
     }

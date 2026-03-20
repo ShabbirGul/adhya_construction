@@ -110,11 +110,11 @@
                     <div class="pbminfotech-post-item glass-card h-100 shadow-lg">
                         <div class="pbmit-featured-img-wrapper shimmer">
                             <div class="pbmit-featured-wrapper">
-                                <img src="{{ asset($vehicle->image) }}" class="img-fluid" alt="{{ $vehicle->title }}" style="width: 100%; height: 280px; object-fit: cover;">
+                                <img src="{{ asset($vehicle->image) }}" class="img-fluid" alt="{{ $vehicle->title }}" style="width: 100%; object-fit: cover;">
                             </div>
                         </div>
                         <div class="pbminfotech-box-content p-4">
-                            <div class="pbmit-serv-cat font-weight-bold mb-2" style="color: #d4af37;">{{ $vehicle->category->title ?? '' }}</div>
+                            <div class="pbmit-serv-cat font-weight-bold mb-2" style="color: #4a0404;">{{ $vehicle->category->title ?? '' }}</div>
                             <h3 class="pbmit-service-title mb-3"><a href="#" style="color: #4a0404; font-weight: 800;">{{ $vehicle->title }}</a></h3>
                             <div class="pbmit-service-description">
                                 <p class="font-weight-bold" style="color: #333333; font-size: 0.95rem;">{{ Str::limit($vehicle->description, 120) }}</p>
@@ -155,21 +155,21 @@
         <div class="container">
             <div class="row g-4 text-center">
                 <div class="col-md-4">
-                    <div class="stat-card p-5 h-100 shadow-lg" style="background: #ffffff; border-radius: 20px; border: 2px solid #d4af37;">
+                    <div class="stat-card p-5 h-100 shadow-lg" style="background: #ffffff; border-radius: 20px; border: 2px solid #4a0404;">
                         <h2 class="stat-number">5 K+</h2>
                         <h5 class="font-weight-bold mb-2" style="color: #000000;">Successful Project Completion</h5>
                         <p class="mb-0 font-weight-bold" style="color: #444444; font-size: 0.9rem;">For all transport authorize and major infrastructure builds.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="stat-card p-5 h-100 shadow-lg" style="background: #ffffff; border-radius: 20px; border: 2px solid #d4af37;">
+                    <div class="stat-card p-5 h-100 shadow-lg" style="background: #ffffff; border-radius: 20px; border: 2px solid #4a0404;">
                         <h2 class="stat-number">30 K+</h2>
                         <h5 class="font-weight-bold mb-2" style="color: #000000;">Proactive Communication</h5>
                         <p class="mb-0 font-weight-bold" style="color: #444444; font-size: 0.9rem;">Key to successful transport project planning and execution.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="stat-card p-5 h-100 shadow-lg" style="background: #ffffff; border-radius: 20px; border: 2px solid #d4af37;">
+                    <div class="stat-card p-5 h-100 shadow-lg" style="background: #ffffff; border-radius: 20px; border: 2px solid #4a0404;">
                         <h2 class="stat-number">89 M</h2>
                         <h5 class="font-weight-bold mb-2" style="color: #000000;">Material Handling</h5>
                         <p class="mb-0 font-weight-bold" style="color: #444444; font-size: 0.9rem;">Efficient resource management and streamlined delivery logistics.</p>
@@ -181,7 +181,7 @@
 
     <!-- Global Presence Section -->
     <section id="global-presence" class="section-xl" style="background-color: #4a0404; color: white; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: 0; right: 0; opacity: 0.1; width: 50%; pointer-events: none; color: #d4af37;">
+        <div style="position: absolute; top: 0; right: 0; opacity: 0.1; width: 50%; pointer-events: none; color: #4a0404;">
             <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M150 200h700v600h-700z" fill="currentColor"/></svg>
         </div>
         <div class="container">
@@ -206,8 +206,8 @@
                         @endphp
                         @foreach($nations as $nation)
                         <div class="col-6 col-sm-4">
-                            <div class="p-4 h-100 text-center shadow-lg" style="background: #ffffff; border-radius: 15px; border: 1px solid #d4af37;">
-                                <span class="nation-badge fw-bold" style="background: #4a0404; color: #d4af37; padding: 5px 12px; border-radius: 8px;">{{ $nation['code'] }}</span>
+                            <div class="p-4 h-100 text-center shadow-lg" style="background: #ffffff; border-radius: 15px; border: 1px solid #4a0404;">
+                                <span class="nation-badge fw-bold" style="background: #ffffffff; color: #4a0404; padding: 5px 12px; border-radius: 8px;">{{ $nation['code'] }}</span>
                                 <h5 class="mb-0 mt-3 font-weight-bold" style="color: #4a0404;">{{ $nation['name'] }}</h5>
                             </div>
                         </div>

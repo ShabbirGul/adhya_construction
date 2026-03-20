@@ -4,19 +4,19 @@
             <div class="pbmit-pre-header-content d-flex justify-content-between">
                 <div class="pbmit-pre-header-left">
                     <ul class="pbmit-contact-info">
-                        <li><i class="pbmit-base-icon-mail-alt"></i><a href="mailto:info@adhyaconstruction.com" class="__cf_email__">info@adhyaconstruction.com</a></li>
-                        <li><i class="pbmit-base-icon-location-dot-solid"></i>Your Office Address Here</li>
-                        <li><i class="pbmit-base-icon-phone-volume-solid-1"></i>+91 12345 67890</li>
+                        <li><i class="pbmit-base-icon-mail-alt"></i><a href="mailto:aadyaconstructionsequip@gmail.com" class="__cf_email__">aadyaconstructionsequip@gmail.com</a></li>
+                        <li><i class="pbmit-base-icon-location-dot-solid"></i>Andhra Pradesh, Tamil Nadu, Kerala, Karnataka, Odisha & nearby</li>
+                        <li><i class="pbmit-base-icon-phone-volume-solid-1"></i>9490003311, 9705799889</li>
                     </ul>
                 </div>
-                <div class="pbmit-pre-header-right">
+                <!-- <div class="pbmit-pre-header-right">
                     <ul class="pbmit-social-links">
                         <li class="pbmit-social-li pbmit-social-facebook"><a title="Facebook" href="#" target="_blank"><span><i class="pbmit-base-icon-facebook-f"></i></span></a></li>
                         <li class="pbmit-social-li pbmit-social-twitter"><a title="Twitter" href="#" target="_blank"><span><i class="pbmit-base-icon-twitter-2"></i></span></a></li>
                         <li class="pbmit-social-li pbmit-social-linkedin"><a title="LinkedIn" href="#" target="_blank"><span><i class="pbmit-base-icon-linkedin-in"></i></span></a></li>
                         <li class="pbmit-social-li pbmit-social-instagram"><a title="Instagram" href="#" target="_blank"><span><i class="pbmit-base-icon-instagram"></i></span></a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
                 <div class="site-branding">
                     <h1 class="site-title">
                         <a href="{{ route('home') }}">
-                            <img class="logo-img" src="{{ asset('assets/user/images/aadyalogo.jpeg') }}" alt="Adhya Construction">
+                            <img class="logo-img" src="{{ asset('assets/user/images/aadyalogo-2.png') }}" alt="Adhya Construction">
                         </a>
                     </h1>
                 </div>

@@ -29,9 +29,9 @@
         :root {
             --pbmit-global-color: #4a0404; /* Deep Maroon */
             --pbmit-secondary-color: #800000;
-            --pbmit-light-navy: #d4af37; /* Gold Accent */
-            --pbmit-gold: #d4af37;
-            --pbmit-gold-gradient: linear-gradient(135deg, #d4af37, #f1c40f);
+            --pbmit-light-navy: #4a0404; /* Gold Accent */
+            --pbmit-gold: #4a0404;
+            --pbmit-gold-gradient: linear-gradient(135deg, #4a0404, #f1c40f);
             --pbmit-maroon-gradient: linear-gradient(135deg, #4a0404, #800000);
         }
         .pbmit-bg-color-global { background-color: var(--pbmit-global-color) !important; }
@@ -60,7 +60,7 @@
             transition: all 0.3s ease;
         }
         .glass-card, .pbmit-award-box-style-1, .pbmit-service-style-2, .testimonial-card, .pbmit-award-wraper, .pbminfotech-post-item, .pbmit-awardbox-wrapper {
-            border-radius: 20px !important;
+            /* border-radius: 20px !important; */
             overflow: hidden;
         }
         .pbmit-img-box img { border-radius: 20px 20px 0 0; }

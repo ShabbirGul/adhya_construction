@@ -517,7 +517,7 @@ ul.pbmit-contact-info{
  .site-header .site-branding img {
      max-width: 100%;
      height: auto;
-     max-height: 80px;
+     max-height: 100px;
 	 display: inline-block;
      -webkit-transition: all 300ms ease;
      transition: all 300ms ease;
@@ -1053,10 +1053,8 @@ ul.pbmit-contact-info{
 .glass-card, .pbminfotech-post-item, .pbmit-award-box-style-1, .pbmit-service-style-2, .testimonial-card, .pbmit-awardbox-wrapper {
     border-radius: 40px !important;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.8) !important; /* Default semi-transparent */
     backdrop-filter: blur(15px) !important;
     border: 1px solid rgba(212, 175, 55, 0.1) !important;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05) !important;
     transition: all 0.3s ease !important;
 }
 .glass-card {
@@ -1071,7 +1069,7 @@ ul.pbmit-contact-info{
     box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15) !important;
 }
 .pbmit-img-box img, .pbmit-featured-img-wrapper img, .pbmit-featured-wrapper img {
-    border-radius: 40px 40px 0 0 !important;
+    /* border-radius: 40px 40px 0 0 !important; */
     transition: transform 0.5s ease;
 }
 .pbmit-award-box-style-1:hover img {
@@ -1191,7 +1189,7 @@ i[class*="fa-"], i[class*="pbmit-base-icon-"] {
 }
 
 .stat-number {
-    background: linear-gradient(135deg, #d4af37 0%, #f1c40f 50%, #d4af37 100%);
+    background: linear-gradient(135deg, #4a0404 0%, #f1c40f 50%, #4a0404 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1221,7 +1219,7 @@ i[class*="fa-"], i[class*="pbmit-base-icon-"] {
 }
 
 .shimmer-text {
-    background: linear-gradient(90deg, #d4af37 0%, #ffffff 50%, #d4af37 100%);
+    background: linear-gradient(90deg, #4a0404 0%, #ffffff 50%, #4a0404 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
