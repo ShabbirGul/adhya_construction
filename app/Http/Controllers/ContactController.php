@@ -19,7 +19,7 @@ class ContactController extends Controller
         ContactQuery::create($validated);
 
         $whatsappNumber = '8074111406';
-        $text = "Hello Adhya Construction, I am " . $validated['name'] . ". \nEmail: " . $validated['email'] . " \nMessage: " . $validated['message'];
+        $text = "Hello Aadya Construction, I am " . $validated['name'] . ". \nEmail: " . $validated['email'] . " \nMessage: " . $validated['message'];
         $url = "https://wa.me/" . $whatsappNumber . "?text=" . urlencode($text);
 
         return redirect()->away($url);

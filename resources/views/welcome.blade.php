@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>Adhya Construction</title>
+    <title>Aadya Construction</title>
 </head>
 
 <body>
-    <h1>Welcome to Adhya Construction</h1>
+    <h1>Welcome to Aadya Construction</h1>
 </body>
 
 </html>

@@ -4,8 +4,10 @@
             <div class="pbmit-pre-header-content d-flex justify-content-between">
                 <div class="pbmit-pre-header-left">
                     <ul class="pbmit-contact-info">
-                        <li><i class="pbmit-base-icon-mail-alt"></i><a href="mailto:aadyaconstructionsequip@gmail.com" class="__cf_email__">aadyaconstructionsequip@gmail.com</a></li>
-                        <li><i class="pbmit-base-icon-location-dot-solid"></i>Andhra Pradesh, Tamil Nadu, Kerala, Karnataka, Odisha & nearby</li>
+                        <li><i class="pbmit-base-icon-mail-alt"></i><a href="mailto:aadyaconstructionsequip@gmail.com"
+                                class="__cf_email__">aadyaconstructionsequip@gmail.com</a></li>
+                        <li><i class="pbmit-base-icon-location-dot-solid"></i>Andhra Pradesh, Tamil Nadu, Kerala,
+                            Karnataka, Odisha & nearby</li>
                         <li><i class="pbmit-base-icon-phone-volume-solid-1"></i>9490003311, 9705799889</li>
                     </ul>
                 </div>
@@ -26,7 +28,8 @@
                 <div class="site-branding">
                     <h1 class="site-title">
                         <a href="{{ route('home') }}">
-                            <img class="logo-img" src="{{ asset('assets/user/images/aadyalogo-2.png') }}" alt="Adhya Construction">
+                            <img class="logo-img" src="{{ asset('assets/user/images/aadyalogo-2.png') }}"
+                                alt="Aadya Construction">
                         </a>
                     </h1>
                 </div>
@@ -41,14 +44,17 @@
                         <div class="collapse navbar-collapse clearfix show" id="pbmit-menu">
                             <div class="pbmit-menu-wrap">
                                 <span class="closepanel">
-                                    <svg class="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg" width="20.163" height="20.163" viewBox="0 0 26.163 26.163">
+                                    <svg class="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg"
+                                        width="20.163" height="20.163" viewBox="0 0 26.163 26.163">
                                         <rect width="36" height="1" transform="translate(0.707) rotate(45)"></rect>
                                         <rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect>
                                     </svg>
                                 </span>
                                 <ul class="navigation clearfix">
-                                    <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
-                                    <li class="{{ Request::is('about-us') ? 'active' : '' }}"><a href="{{ route('user.about') }}">About Us</a></li>
+                                    <li class="{{ Request::is('/') ? 'active' : '' }}"><a
+                                            href="{{ route('home') }}">Home</a></li>
+                                    <li class="{{ Request::is('about-us') ? 'active' : '' }}"><a
+                                            href="{{ route('user.about') }}">About Us</a></li>
                                     <li><a href="{{ route('user.categories') }}">Categories</a></li>
                                     <li><a href="{{ route('user.vehicles') }}">Vehicles</a></li>
                                     <li><a href="{{ route('user.faqs') }}">FAQs</a></li>

@@ -3224,7 +3224,7 @@
 .pbmit-slider-two .pbmit-slider-item:before{
 	content: "";
 	position: absolute;
-	width: 58%;
+	width: 108%;
 	height: 100%;
 	transform-origin: 50% 50%;
 	background: url(../images/banner-slider-img/slider2-shape.png) 50% 50% / cover no-repeat transparent;

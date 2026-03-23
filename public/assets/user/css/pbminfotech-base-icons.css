@@ -137,7 +137,7 @@
 .pbmit-base-icon-square-dot-:before { content: '\e850'; } /* '' */
 .pbmit-base-icon-truck:before { content: '\e851'; } /* '' */
 .pbmit-base-icon-calendar-alt-solid:before { content: '\e852'; } /* '' */
-.pbmit-base-icon-plane:before { content: '\e853'; } /* '' */
+.pbmit-base-icon-plane:before { content: '\e853'; color: #fff;} /* '' */
 .pbmit-base-icon-location-1:before { content: '\e854'; } /* '' */
 .pbmit-base-icon-forward:before { content: '\e855'; } /* '' */
 .pbmit-base-icon-pin:before { content: '\e856'; } /* '' */

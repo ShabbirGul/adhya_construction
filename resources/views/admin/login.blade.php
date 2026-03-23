@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login - Adhya Construction</title>
+    <title>Admin Login - Aadya Construction</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -114,7 +114,7 @@
         <div class="construction-logo">
             <i class="fa-solid fa-helmet-safety"></i>
         </div>
-        <h1>ADHYA ADMIN</h1>
+        <h1>Aadya ADMIN</h1>
 
         <form action="{{ url('/admin/login') }}" method="POST">
             @csrf
@@ -129,7 +129,7 @@
             <button type="submit" class="btn">LOGIN TO DASHBOARD</button>
 
             @if($errors->any())
-            <div class="error-msg">{{ $errors->first() }}</div>
+                <div class="error-msg">{{ $errors->first() }}</div>
             @endif
         </form>
     </div>

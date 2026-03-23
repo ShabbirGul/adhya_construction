@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Admin Dashboard') - Adhya Construction</title>
+    <title>@yield('title', 'Admin Dashboard') - Aadya Construction</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
@@ -17,7 +17,7 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <i class="fa-solid fa-helmet-safety"></i>
-                <span>ADHYA ADMIN</span>
+                <span>Aadya ADMIN</span>
             </div>
             <nav class="sidebar-nav">
                 <a href="{{ route('categories.index') }}"
@@ -33,13 +33,16 @@
                 <a href="{{ route('clients.index') }}" class="{{ request()->routeIs('clients.*') ? 'active' : '' }}">
                     <i class="fa-solid fa-users"></i> Clients
                 </a>
-                <a href="{{ route('histories.index') }}" class="{{ request()->routeIs('histories.*') ? 'active' : '' }}">
+                <a href="{{ route('histories.index') }}"
+                    class="{{ request()->routeIs('histories.*') ? 'active' : '' }}">
                     <i class="fa-solid fa-clock-rotate-left"></i> History
                 </a>
-                <a href="{{ route('countries.index') }}" class="{{ request()->routeIs('countries.*') ? 'active' : '' }}">
+                <a href="{{ route('countries.index') }}"
+                    class="{{ request()->routeIs('countries.*') ? 'active' : '' }}">
                     <i class="fa-solid fa-globe"></i> Countries
                 </a>
-                <a href="{{ route('testimonials.index') }}" class="{{ request()->routeIs('testimonials.*') ? 'active' : '' }}">
+                <a href="{{ route('testimonials.index') }}"
+                    class="{{ request()->routeIs('testimonials.*') ? 'active' : '' }}">
                     <i class="fa-solid fa-comment-dots"></i> Testimonials
                 </a>
                 <a href="{{ route('faqs.index') }}" class="{{ request()->routeIs('faqs.*') ? 'active' : '' }}">
@@ -73,9 +76,9 @@
 
             <div class="content-body">
                 @if(session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
                 @endif
                 @yield('content')
             </div>

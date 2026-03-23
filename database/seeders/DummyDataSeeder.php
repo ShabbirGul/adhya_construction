@@ -14,7 +14,7 @@ class DummyDataSeeder extends Seeder
     {
         // Banners
         \App\Models\Banner::updateOrCreate(['title' => 'Building Your Dreams with Excellence'], [
-            'subtitle' => 'Adhya Construction',
+            'subtitle' => 'Aadya Construction',
             'button_text' => 'Our Vehicles',
             'button_link' => '/vehicles',
             'image' => 'assets/user/images/banner-slider-img/demo-01-slide-1.jpg',
@@ -72,7 +72,7 @@ class DummyDataSeeder extends Seeder
         // Testimonials
         \App\Models\Testimonial::updateOrCreate(['name' => 'John Doe'], [
             'position' => 'Project Manager',
-            'content' => 'Adhya Construction provided exceptional service and timely delivery of machinery.',
+            'content' => 'Aadya Construction provided exceptional service and timely delivery of machinery.',
             'status' => 1
         ]);
 
